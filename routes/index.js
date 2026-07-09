@@ -1,5 +1,9 @@
 const router = require('express').Router();
 
-router.get('/', (req, res) => { res.send('Hello World'); });
+router.use('/contacts', require('./contacts'));
+
+router.get('/', (req, res) => {
+  res.send('Contacts API is running!');
+});
 
 module.exports = router;
